@@ -241,6 +241,7 @@ p{
 @media only screen and (max-width:668px){
     .about{
         width: 100%;
+        margin-left: -40px;
     }
     .player1{
         grid-template-columns: repeat(1, 1fr);
