@@ -44,13 +44,11 @@ p{
     padding: 15px 30px;
     border-bottom-left-radius: 40%;
     border-top-right-radius: 40%;
-
 }
 .header-img img{
     width: 100%;
 }
 .header-img:hover img{
-    /* transform: scale(0.1) translate(-60%, -60%); */
     transform: rotate3d(2, 4, 7.0, 40deg);
     transition: all linear .7s;
 }
@@ -84,42 +82,14 @@ p{
     font-weight: bold;
 }
 
-/*===========  FOOTER PART ===========*/
- .footer-container{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    text-align: center;
-}
-.footer-img img{
-    width: 35%;
-}
-.footer-icon a{
-    width: 32px;
-    height: 32px;
-    margin-right: 14px;
-    display: inline-block;
-    background-color: rgb(230, 230, 230);
-    border-radius: 50%;
-    color: #acacac;
-    
-}
-.footer-icon a i{
-    margin-top: 8px;
-}
-.footer-icon a:hover{
-    background-color: rgb(218, 216, 216);
-    border-radius: 50%;
-    color: #979797;
-    transition: all linear .4s;
-} 
+/* =============more-game part=============== */
 
-/* =============matches part=============== */
 .more-game{
-   padding: 50px 120px;
-    background-color: rgba(241, 241, 241, 0.479);
+    width:80%;
+    margin: auto;
+    margin-top: 40px;
 }
-.more-game h2{
+.game-head h2{
     font-weight: 700;
     font-size: 30px;
     border-bottom: 1px dotted rgb(192, 192, 192);
@@ -140,9 +110,18 @@ p{
 }
 
 
-/* about part */
+/*======== about part ===========*/
+
 .about{
-    padding: 50px 120px;
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+}
+.about-head h2{
+    font-weight: 700;
+    font-size: 30px;
+    border-bottom: 1px dotted rgb(192, 192, 192);
+    padding-bottom: 10px;
 }
 .about-us{
     display: grid;
@@ -157,37 +136,43 @@ p{
 .player1-img img{
     width: 100%;
 }
-
-/* Copa Highlights */
-.copa{
-    padding: 50px 120px;
-}
-/* .copa-2021{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-} */
-.copa-right img{
+hr{
     width: 100%;
+    height: 2%;
+    color: #000;
 }
 
-.copa-2021{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.copa-left{
-    margin-right: 40px;
-}
-.copa-left a{
-    color: #fff;
-    font-size: 16px;
-    padding: 10px 25px;
-    background-color: #E02C6D;
-    border-radius: 5px;
-}
+/*===========  FOOTER PART ===========*/
 
-
-
+.footer-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.footer-img img{
+    width: 35%;
+}
+.footer-icon a{
+    width: 32px;
+    height: 32px;
+    margin-right: 14px;
+    display: inline-block;
+    background-color: rgb(230, 230, 230);
+    border-radius: 50%;
+    color: #949393;
+}
+.footer-icon a i{
+    margin-top: 8px;
+}
+.footer-icon a:hover{
+    background-color: rgb(184, 183, 183);
+    border-radius: 50%;
+    color: #3d3d3d;
+    transition: all linear .4s;
+} 
 /* ===========MEDIA QUARY================ */
 
 /* header section responsive */
@@ -207,7 +192,6 @@ p{
 {
     .header{
         width: 100%;
-        
     }
     .main-header{
         grid-template-columns: repeat(1, 1fr);
@@ -241,21 +225,19 @@ p{
 
 @media only screen and (max-width:668px){
     .more-game{
-        width: 100%;
+        width: 90%;
     }
-    .more-game h2{
-        font-size: 25px;
+    .game-head h2{
+        font-size: 22px;
     }
     .game{
         width: 100%;
         grid-template-columns: repeat(1, 1fr);
         grid-row-gap: 20px;   
     }
-    .game1 img,
-    .game1 p{
-        width: 90%
+    .game1{
+        width: 100%;
     }
-    
 }
 @media only screen and (min-width:668px) and (max-width:992px){
     .game{
@@ -265,53 +247,69 @@ p{
 }
 
 /* About part Resposive */
+
 @media only screen and (max-width:668px){
     .about{
-        margin-left: -40px;
+        width: 90%;
     }
     .player1{
         grid-template-columns: repeat(1, 1fr);
-        grid-row-gap: 20px;
-        width: 80%;
+        grid-row-gap: 30px;
+        width: 100%;
+    }
+    .about-us{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
     }
     
 }
-
-/* Footer Part Responsive */
-@media only screen and (max-width:992px){
-    .footer-container{
+@media only screen and (min-width:668px) and (max-width:992px){
+    .about{
+        width: 90%;
+    }
+    .player1{
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 30px;
+        width: 100%;
+    }
+    .about-us{
         width: 100%;
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Footer Part Responsive */
+@media only screen and (max-width:668px){
+    .footer-container{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 40px 0;
+    }
+    .footer-img img{
+        width: 90%;
+    }
+    .footer-icon{
+        margin-left: 10%;
+    }
+    .copy{
+        margin-left: 5%;
+    }
+}
+@media only screen and (min-width:668px) and (max-width:992px) {
+    .footer-container{
+        width: 100%;
+        margin: 40px 0;
     }
     .footer-img img{
         width: 60%;
     }
-    .footer-icon a i{
-        margin: 0 5px;
-        padding-top: 5px;
+    .footer-icon{
+        
+        margin-left: 10%;
+    }
+    .copy{
+        margin-left: 5%;
     }
 }
 
-/* Copa Highlights Responsive */
-/* @media only screen and (max-width:668px){
-    .copa{
-        width: 100%;
-        margin-top: -10%;
-        margin-left: -10%;
-    }
-    .copa-2021{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .copa-left h1{
-        font-size: 30px;
-    }
-    .copa-left p{
-        width: 80%;
-    }
-    .copa-right img{
-        width: 50%;
-        margin-top: 20px;
-    }
-} */
 
